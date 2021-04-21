@@ -1,0 +1,54 @@
+{% extends 'diverty/base.html' %}
+{% load static %}
+{% block titulo %} Formulario Reservas {% endblock%}
+    
+{% block contenedor %}
+  <div class="section container">
+      <h1 class="center-align white-text">Registro de reservas</h1>
+    <div class="row">
+      <form class="col s12">
+        <div class="row card-panel">
+          <div class="input-field col s6">
+            <span class="material-icons prefix">
+                vpn_key
+                </span>
+            <input type="text" id="clave_id"class="validate"required>
+            <label for="clave_id">Id reserva</label>
+            <span class="helper-text" data-error="Id reserva invalido" ></span>
+          </div>
+          <div class="input-field col s6">
+            <span class="material-icons prefix">
+                person
+                </span>
+            <input type="text" id="nombre"class="validate"required>
+            <span class="helper-text" data-error="Nombre invalido" ></span>
+            <label for="nombre">Nombre</label>
+            
+          </div>
+          <div class="input-field col s6">
+            <span class="material-icons prefix">
+                date_range
+                </span>
+                <input type="datetime-local"  id="fecha">
+            <span class="helper-text" data-error="Fecha invalida" ></span>
+            
+            
+          </div>
+          <div class="input-field col s6">
+            <span class="material-icons prefix">
+                attractions
+                </span>
+            <input type="text" id="atraccion"class="validate"required>
+            <span class="helper-text" data-error="Numero de atraccion invalido" ></span>
+            <label for="atraccion">Atraccion</label>
+            
+          </div>
+          
+          
+          <button type="submit"class="btn">Enviar</button>
+
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

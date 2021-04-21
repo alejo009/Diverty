@@ -1,0 +1,72 @@
+{% extends 'diverty/base.html' %}
+{% load static %}
+{% block titulo %}Atracciones {% endblock %}
+{% block contenedor %}
+
+
+
+  <main>
+    <h1 class="titulo_crud_reservas">Lista de atracciones </h1>
+   
+             
+   
+    <a class="crear-reserva" href="{% url 'diverty:formulario_atracciones' %}">
+        
+        
+        Crear atracciones +</a>
+    <table class="stripped highlight centered responsive-table ">
+        <thead>
+            <tr class="grey lighten-2">
+                <th >Id atraccion</th>
+                <th>Nombre</th>
+                <th>Capacidad</th>
+                <th>Fecha</th>
+                <th>Precio</th>
+                <th>Promociones</th>
+                <th>Reserva</th>
+                <th>Acciones</th>
+             
+                
+            </tr>
+        </thead>
+        <br>
+        <tbody>
+            <tr>
+                <td>090510</td>
+                <td>Montaña rusa</td>
+                <td>20</td>
+                <td>04/09/2018</td>
+                <td>1950</td>
+                <td>0551020</td>
+                <td>22109a</td>
+               
+                
+                <td>
+                    <a href="#" class="material-icons  red-text  ">
+                        delete
+                    </a>
+                        <a href="#"  class="material-icons yellow-text text-darken-4">
+                            mode_edit
+                        </a>
+                </td>
+            </tr>
+           
+            
+            
+        </tbody>
+        
+    </table>
+    <ul class="pagination">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="#!">1</a></li>
+        <li class="waves-effect waves-teal "><a href="#!">2</a></li>
+        <li class="waves-effect"><a href="#!">3</a></li>
+        <li class="waves-effect"><a href="#!">4</a></li>
+        <li class="waves-effect"><a href="#!">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      </ul>
+
+  </main>
+{% endblock %}
+  
+

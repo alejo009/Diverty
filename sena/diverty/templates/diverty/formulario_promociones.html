@@ -1,0 +1,47 @@
+{% extends 'diverty/base.html' %}
+{% load static %}
+{% block titulo %}Formulario promociones {% endblock %}
+{% block contenedor %}
+    
+
+  <div class="section container">
+      <h1 class="center-align white-text">Registro de promociones</h1>
+    <div class="row">
+      <form class="col s12">
+        <div class="row card-panel">
+          <div class="input-field col s6">
+            <span class="material-icons prefix">
+                vpn_key
+                </span>
+            <input type="text" id="clave_id"class="validate"required>
+            <label for="clave_id">Id Promociones</label>
+            <span class="helper-text" data-error="Id invalido" ></span>
+          </div>
+          <div class="input-field col s6">
+            <span class="material-icons prefix">
+                date_range
+                </span>
+                <input type="datetime-local"  id="fecha"class="validate"required>
+                <span class="helper-text" data-error="Fecha invalida" ></span>
+            
+            
+          </div>
+          
+          <div class="container">
+          <buttom class="btn waves-effect  waves-light boton-ventas"type="submit"name="action">Enviar
+            <i class="material-icons right">send</i>
+          </buttom>
+            </div>
+
+
+          
+          
+          
+         
+
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}
+ 

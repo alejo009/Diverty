@@ -1,0 +1,58 @@
+{% extends 'diverty/base.html' %}
+{% load static %}
+{% block contenedor %}
+
+<div class="section container">
+  <h1 class="center-align white-text">Registro de ventas</h1>
+  <div class="row">
+    <form class="col s12">
+      <div class="row card-panel">
+        <div class="input-field col s6">
+          <span class="material-icons prefix">
+            vpn_key
+          </span>
+          <input type="text" id="clave_id" class="validate" required>
+          <label for="clave_id">Id ventas</label>
+          <span class="helper-text" data-error="Id invalido"></span>
+        </div>
+        <div class="input-field col s6">
+          <span class="material-icons prefix">
+            date_range
+          </span>
+          <input type="datetime-local" id="fecha" class="validate" required>
+          <span class="helper-text" data-error="Fecha invalida"></span>
+        </div>
+        <div class="input-field col s6">
+          <span class="material-icons prefix">
+            paid
+          </span>
+          <input type="number" id="precio" class="validate" required>
+          <span class="helper-text" data-error="Costo de venta invalido"></span>
+          <label for="precio">Precio</label>
+        </div>
+        <div class="input-field col s6">
+          <span class="material-icons prefix">
+            attractions
+          </span>
+          <input type="text" id="atraccion" class="validate" required>
+          <span class="helper-text" data-error="Numero de atraccion invalido"></span>
+          <label for="atraccion">Atraccion</label>
+        </div>
+        <div class="input-field col s6">
+          <span class="material-icons prefix">
+            attractions
+          </span>
+          <input type="text" id="id_cliente" class="validate" required>
+          <span class="helper-text" data-error="Id cliente invalido"></span>
+          <label for="id_cliente">Cliente</label>
+        </div>
+        <div class="container">
+          <buttom class="btn waves-effect  waves-light boton-ventas" type="submit" name="action">Enviar
+            <i class="material-icons right">send</i>
+          </buttom>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

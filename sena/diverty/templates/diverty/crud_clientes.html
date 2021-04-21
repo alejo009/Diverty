@@ -1,0 +1,68 @@
+{% extends 'diverty/base.html' %}
+{% load static %}
+{% block titulo %}Clientes {% endblock %}
+
+ 
+
+{% block contenedor %}
+  <main>
+    <h1 class="titulo_crud_reservas">Lista de clientes </h1>
+   
+             
+   
+    <a class="crear-reserva" href="{% url 'diverty:formulario_register' %}">
+        
+        
+        Crear clientes +</a>
+    <table class="stripped highlight centered responsive-table ">
+        <thead>
+            <tr class="grey lighten-2">
+                <th >Id cliente</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>Acciones</th>
+             
+                
+            </tr>
+        </thead>
+        <br>
+        <tbody>
+            <tr>
+                <td>12312324</td>
+                <td>Hugo</td>
+                <td>Vargas</td>
+                <td>15</td>
+                <td>avenida 34 calle 50</td>
+                <td>123456</td>
+                
+                <td>
+                    <a href="#" class="material-icons  red-text  ">
+                        delete
+                    </a>
+                        <a href="#"  class="material-icons yellow-text text-darken-4">
+                            mode_edit
+                        </a>
+                </td>
+            </tr>
+           
+            
+            
+        </tbody>
+        
+    </table>
+    <ul class="pagination">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="#!">1</a></li>
+        <li class="waves-effect waves-teal "><a href="#!">2</a></li>
+        <li class="waves-effect"><a href="#!">3</a></li>
+        <li class="waves-effect"><a href="#!">4</a></li>
+        <li class="waves-effect"><a href="#!">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      </ul>
+
+  </main>
+{% endblock %}
+ 

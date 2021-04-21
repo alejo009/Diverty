@@ -1,0 +1,95 @@
+:root{
+	--colorPrincipal:#c9eef4;
+	--colorSecundario:#E0C2CA;
+}
+html{
+	font-size: 62.5%;
+
+}
+body{
+	font-size: 1.6rem;
+	
+}
+/**Logo **/
+.logo-diverty{
+	width:60px;
+	border-radius: 50%;
+	margin-left: 1rem;
+	margin-top: 0.5rem;
+}
+/**Hero**/
+.row__subtitulo{
+	margin-bottom: 1rem;
+}
+.container-texto{
+	background-image: url(../img/algodondeazucar.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	max-width: 100%;
+	height: 300px;
+	
+}
+.parrafo-banner{
+	font-size: 2rem;
+}
+/** Main **/
+/*Tipografia */
+.titulo-servicio1,
+.titulo-servicio2,
+.titulo-servicio3{
+	font-size: 1.64rem;
+	font-weight: 600;
+
+}
+.carrito1,
+.carrito2,
+.carrito3{
+	background-color: #c9eef4;
+	border-radius: 10%;
+	text-transform: capitalize;
+
+}
+.titulo-nuestros-servicios{
+	margin-top: 7rem;
+	font-weight: 600;
+}
+.imagen-block{
+	margin-top: 30px;
+}
+.imagen-block img{
+	width: 170px;
+	border-radius: 10%;
+}
+/**Footer **/
+.page-footer{
+	overflow: hidden;
+}
+.contenedor-footer img{
+	width: 36px;
+	height: 36px;
+	display: block;
+}
+/**Tipografia **/
+.contenedor-footer label{
+	position: relative;
+	left: 43px;
+	bottom: 30px;
+	font-size: 1.7rem;
+	color: var(--colorFuente);
+
+	
+}
+.informacion-compañia,
+.informacion-contacto,
+.informacion-redes{
+	font-weight: 600;
+	font-size: 2.4rem;
+}
+
+
+.link-termino-condiciones{
+	display: block;
+	padding-top: 1rem;
+}

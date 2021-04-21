@@ -1,0 +1,59 @@
+{% extends 'diverty/base.html' %}
+{% load static %}
+{% block titulo %} Promociones {% endblock %}
+
+{% block contenedor %}
+<main>
+  <h1 class="titulo_crud_reservas">Lista de promociones</h1>
+
+
+  <a class="crear-reserva" href="{% url 'diverty:formulario_promociones' %}">Crear promocion +</a>
+  <table class="stripped highlight centered responsive-table ">
+    <thead>
+      <tr class="grey lighten-2">
+        <th>Id Promocion</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+
+      </tr>
+    </thead>
+    <br>
+    <tbody>
+      <tr>
+        <td>12312323</td>
+        <td>02/15/2017</td>
+
+
+        <td>
+          <a href="#" class="material-icons  red-text  ">
+            delete
+          </a>
+          <a href="#" class="material-icons yellow-text text-darken-4">
+            mode_edit
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>23434324abr</td>
+        <td>07/10/2015</td>
+
+
+
+      </tr>
+
+
+    </tbody>
+
+  </table>
+  <ul class="pagination">
+    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+    <li class="active"><a href="#!">1</a></li>
+    <li class="waves-effect waves-teal "><a href="#!">2</a></li>
+    <li class="waves-effect"><a href="#!">3</a></li>
+    <li class="waves-effect"><a href="#!">4</a></li>
+    <li class="waves-effect"><a href="#!">5</a></li>
+    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+  </ul>
+
+</main>
+{% endblock %}
