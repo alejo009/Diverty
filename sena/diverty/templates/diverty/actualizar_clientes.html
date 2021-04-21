@@ -1,0 +1,81 @@
+{% extends 'diverty/base.html' %}
+{% load static %}
+{% block titulo %} Actualizar clientes {% endblock %}
+
+<h1>Actualizar Clientes</h1>
+
+{% block contenedor %}
+<div class="section container">
+    <h2 class="center-align white-text">Registro de empleados</h2>
+    <div class="row">
+        <form class="col s12" method="POST" action="{% url 'diverty:guardar-clientes' %}">
+            {% csrf_token %}
+            
+
+
+            <div class="row card-panel">
+
+
+                <div class="input-field col s6">
+                    <span class="material-icons prefix">
+                        person
+                    </span>
+                    <input type="hidden" name="id" value="{{ datos.id_clientes }}" class="form-control" readonly="" >
+                    
+                    <input type="text" name="nombre" id="nombre" class="validate" required>
+                    <span class="helper-text" data-error="Ingrese un nombre valido"></span>
+                    <label for="nombre">Nombre</label>
+
+                </div>
+                <div class="input-field col s6">
+                    <span class="material-icons prefix">
+                        dns
+                    </span>
+                    <input type="text" name="apellido" id="apellido" class="validate" required>
+                    <span class="helper-text" data-error="Ingrese una apellido valido"></span>
+                    <label for="apellido">Apellido</label>
+
+
+                </div>
+                <div class="input-field col s6">
+                    <span class="material-icons prefix">
+                        cake
+                    </span>
+                    <input type="number" name="edad" id="edad" class="validate" required>
+                    <span class="helper-text" data-error="Ingrese una edad valida"></span>
+                    <label for="edad">Edad</label>
+
+
+                </div>
+
+
+                <div class="input-field col s6">
+                    <span class="material-icons prefix">
+                        place
+                    </span>
+                    <input type="text" name="direccion" id="direccion" class="validate" required>
+                    <span class="helper-text" data-error="Ingrese una direccion valida"></span>
+                    <label for="direccion">Direccion</label>
+
+
+                </div>
+                <div class="input-field col s6">
+                    <span class="material-icons prefix">
+
+                        phone_iphone
+
+                    </span>
+                    <input type="tel" name="telefono" step="1" id="telefono" class="validate" required>
+                    <span class="helper-text" data-error="Ingrese un numero valido"></span>
+                    <label for="telefono">Numero</label>
+
+                </div>
+
+
+                <button type="submit" class="btn">Enviar</button>
+
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

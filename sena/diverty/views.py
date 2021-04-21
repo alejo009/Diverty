@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect
 from django.urls import reverse
-
+from .models import  promociones,atracciones,clientes,ventas,reserva,detalles,Empleado,Usuario
 # Create your views here.
 
 #Pagina princiapl
@@ -13,11 +13,37 @@ def formulario_login(request):
     return render (request,'diverty/formulario_login.html')
 #formulario register
 def formulario_register(request):
-    return render (request,'diverty/formulario_register.html')
+    return render (request,'diverty/formulario_clientes.html')
 
 #crud clientes
 def crud_clientes(request):
-    return render (request,'diverty/crud_clientes.html')
+
+    usuarios=clientes.objects.all()
+    contexto={"Usuarios":usuarios}
+    return render (request,'diverty/crud_clientes.html',contexto)
+#Gurdado de clientes
+def guardarClientes(request):
+    if request.method=="POST":
+        nom=request.POST["nombre"]
+        apell=request.POST["apellido"]
+        age=request.POST["edad"]
+        calle=request.POST["direccion"]
+        numero=request.POST["telefono"]
+        guardado=clientes(nombre=nom,apellido=apell,edad=age,direccion=calle,telefono=numero)
+        guardado.save()
+        return HttpResponseRedirect(reverse('diverty:crud_clientes',args=()))
+    else:
+        return HttpResponse("fin")
+#Eliminar Clientes
+def eliminarClientes(request,id):
+    borrado=clientes.objects.get(pk=id)
+    borrado.delete()
+    return HttpResponseRedirect(reverse('diverty:crud_clientes',args=()))
+
+
+def editarClientes(request):
+    pass
+
 #crud reservas
 def crud_reservas(request):
     return render (request,'diverty/crud_reservas.html')

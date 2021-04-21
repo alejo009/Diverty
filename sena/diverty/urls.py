@@ -7,7 +7,11 @@ urlpatterns=[
     path('',views.index,name='index'),
      path('formulario_login/',views.formulario_login,name='formulario_login'),
     path('formulario_register/',views.formulario_register,name='formulario_register'),
+    #clientes-urls:
     path('crud_clientes/',views.crud_clientes,name='crud_clientes'),
+    path('guardar-clientes',views.guardarClientes,name='guardar-clientes'),
+    path('eliminar-clientes/<int:id>/',views.eliminarClientes,name='eliminar-clientes'),
+
     path ('crud_reservas/',views.crud_reservas,name='crud_reservas'),
     path('formulario_reservas/',views.formulario_reservas,name='formulario_reservas'),
     path('crud_empleado/',views.crud_empleado,name='crud_empleado'),
