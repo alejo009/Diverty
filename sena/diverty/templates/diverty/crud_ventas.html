@@ -4,56 +4,56 @@
 
 
 {% block contenedor %}
-  <main>
+<main>
     <h1 class="titulo_crud_reservas">Lista de reservas</h1>
-             
-   
+
+
     <a class="crear-reserva" href="{%  url 'diverty:formulario_ventas' %}">Crear venta +</a>
+    {% if items_ventas %}
     <table class="stripped highlight centered responsive-table ">
         <thead>
             <tr class="grey lighten-2">
-                <th >Id Reserva</th>
+                <th>Id Venta</th>
                 <th>Fecha</th>
                 <th>Coste</th>
-                <th>Atraccion</th>
                 <th>Cliente</th>
                 <th>Acciones</th>
-                
+
             </tr>
         </thead>
         <br>
         <tbody>
+        {% for registros in items_ventas %}
             <tr>
-                <td>12312323</td>
-                <td>01/05/2020</td>
-                <td>200.000</td>
-                <td>Carrusel</td>
-                <td>1002831</td>
+                <td>{{ registro.id_venta }}</td>
+                <td>{{ registro.fecha }}</td>
+                <td>{{ registro.costo }}</td>
+                <td>{{ registro.clientes }}</td>
                 
+
+
                 <td>
                     <a href="#" class="material-icons  red-text  ">
                         delete
                     </a>
-                        <a href="#"  class="material-icons yellow-text text-darken-4">
-                            mode_edit
-                        </a>
+                    <a href="#" class="material-icons yellow-text text-darken-4">
+                        mode_edit
+                    </a>
                 </td>
             </tr>
             <tr>
-                <td>2323239</td>
-                <td>01/16/2019</td>
-                <td>15000</td>
-                <td>Pony</td>
-                <td>1088827201</td>
-                
-                
-               
+
             </tr>
-            
-            
+
+
         </tbody>
-        
+        {% endfor %}
+
     </table>
+    {% else %}
+    No hay datos aun
+    {% endif %}
+   
     <ul class="pagination">
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
         <li class="active"><a href="#!">1</a></li>
@@ -62,9 +62,7 @@
         <li class="waves-effect"><a href="#!">4</a></li>
         <li class="waves-effect"><a href="#!">5</a></li>
         <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-      </ul>
+    </ul>
 
-  </main>
+</main>
 {% endblock %}
- 
-

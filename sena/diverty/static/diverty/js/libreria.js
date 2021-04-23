@@ -5,3 +5,9 @@ function eliminarClientes(ruta){
     }
     
 }
+function eliminarEmpleado(ruta){
+    confirmacion=confirm("Está seguro?")
+    if (confirmacion){
+        location.href=ruta;
+    }
+}

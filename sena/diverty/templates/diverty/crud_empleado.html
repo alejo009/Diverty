@@ -12,6 +12,7 @@
         
         
         Crear empleado +</a>
+    {% if Empleado %}
     <table class="stripped highlight centered responsive-table ">
         <thead>
             <tr class="grey lighten-2">
@@ -20,26 +21,26 @@
                 <th>Apellido</th>
                 <th>Cedula</th>
                 <th>Correo</th>
-                <th>Clave</th>
                 <th>Acciones</th>
                 
             </tr>
         </thead>
         <br>
         <tbody>
+        {% for registro  in  Empleado %}
             <tr>
-                <td>12312324</td>
-                <td>Hugo</td>
-                <td>Vargas</td>
-                <td>100232010</td>
-                <td>ajimenez1037@misena.edu.co</td>
-                <td>123456</td>
+                <td>{{ registro.id_empleado }}</td>
+                <td>{{ registro.nombre }}</td>
+                <td>{{ registro.apellido }}</td>
+                <td>{{ registro.correo }}</td>
+                <td>{{ registro.identificacion }}</td>
+               
                 
                 <td>
-                    <a href="#" class="material-icons  red-text  ">
+                    <a href="#"onclick="eliminarEmpleado('{% url 'diverty:eliminar_empleado' registro.id_empleado %}')"  href="#" class="material-icons  red-text  ">
                         delete
                     </a>
-                        <a href="#"  class="material-icons yellow-text text-darken-4">
+                        <a href="{% url 'diverty:actualizar_empleado' registro.id_empleado %}"  class="material-icons yellow-text text-darken-4">
                             mode_edit
                         </a>
                 </td>
@@ -48,8 +49,12 @@
             
             
         </tbody>
+        {% endfor %}
         
     </table>
+    {% else %}
+    No hay datos
+    {% endif %}
     <ul class="pagination">
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
         <li class="active"><a href="#!">1</a></li>

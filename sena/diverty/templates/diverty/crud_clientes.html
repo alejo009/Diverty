@@ -48,7 +48,7 @@
                     <a onclick="eliminarClientes('{% url 'diverty:eliminar-clientes' registro.id_cliente %}')"  href="#" class="material-icons  red-text  ">
                         delete
                     </a>
-                    <a href="#" class="material-icons yellow-text text-darken-4">
+                    <a href="{% url 'diverty:actualizar_clientes' registro.id_cliente %}" class="material-icons yellow-text text-darken-4">
                         mode_edit
                     </a>
                 </td>
